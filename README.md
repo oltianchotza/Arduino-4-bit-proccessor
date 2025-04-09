@@ -1,71 +1,62 @@
-4-Bit Processor
-This is a simple 4-bit processor built with Arduino that performs basic arithmetic operations like addition and multiplication. It uses binary inputs, processes them, and displays the results using LEDs.
+# 🧠 4-Bit Arduino Processor
 
-Features
-Performs addition and multiplication of two 4-bit binary numbers.
+A simple **4-bit processor built with Arduino** that performs basic arithmetic operations like **addition** and **multiplication**. It uses binary inputs and displays results in real time using LEDs.
 
-Displays results in binary format using LEDs.
+---
 
-Uses a clock button to control the input and operation phases.
+## 📸 Circuit Diagrams
 
-Handles overflow automatically (results are limited to 4 bits).
+<table>
+  <tr>
+    <td align="center"><b>Digital Circuit</b></td>
+    <td align="center"><b>RI Circuit</b></td>
+  </tr>
+  <tr>
+    <td><img src="Arduino-circuit.png" width="300"/></td>
+    <td><img src="Rl-circuit.png" width="300"/></td>
+  </tr>
+</table>
 
-How It Works
-Input Phase:
+---
 
-Use toggle switches to set the first binary number (Reg A).
+## ✨ Features
 
-Press the clock button to store this number in Reg A.
+- Performs **addition and multiplication** of two 4-bit binary numbers  
+- Displays results in **binary format using LEDs**  
+- Controlled using a **clock button** for input and operation phases  
+- **Handles overflow** automatically (limited to 4 bits)
 
-Use toggle switches to set the second binary number (Reg B).
+---
 
-Press the clock button again to store this number in Reg B.
+## ⚙️ How It Works
 
-Operation Phase:
+### 🔢 Input Phase
+1. Use toggle switches to set the first binary number (Reg A)
+2. Press the **clock button** to store this number in Reg A
+3. Set the second binary number (Reg B)
+4. Press the **clock button** again to store this number in Reg B
 
-Press the "Add" button to perform addition or the "Multiply" button to perform multiplication.
+### ➕ Operation Phase
+- Press the **"Add" button** to perform addition  
+- Press the **"Multiply" button** to perform multiplication  
+- The processor calculates the result
 
-The processor calculates the result.
+### 💡 Output Phase
+- Result is displayed in **binary format on 4 LEDs**
 
-Output Phase:
+---
 
-The result is displayed on four LEDs in binary format.
+## 💡 Example
 
-Example Usage
-Inputs:
+| Register A | Register B | Operation | Result (Binary) | Result (Decimal) |
+|------------|------------|-----------|------------------|------------------|
+| `0011`     | `0101`     | Add       | `1000`           | `8`              |
+| `0011`     | `0101`     | Multiply  | `1111`           | `15`             |
 
-Reg A: 0011 (3 in decimal)
+---
 
-Reg B: 0101 (5 in decimal)
+## 🛠 Troubleshooting
 
-Operations:
-
-Add → Result: 1000 (8 in decimal)
-
-Multiply → Result: 1111 (15 in decimal)
-
-Setup Instructions
-Connect your Arduino and components as described below:
-
-4 LEDs for output (connected to pins 8, 9, 10, and 11).
-
-4 toggle switches for binary input (connected to pins 2, 3, 4, and 5).
-
-One button for addition (connected to pin 6).
-
-One button for multiplication (connected to pin 7).
-
-One button for the clock signal (connected to pin 13).
-
-Open the .ino file in Arduino IDE.
-
-Upload the code to your Arduino board.
-
-Use the toggle switches and buttons as explained above.
-
-Troubleshooting
-If LEDs don’t light up, check your wiring and ensure resistors are properly connected.
-
-If results are incorrect, double-check your input switches.
-
-If buttons don’t respond, make sure they’re connected properly or replace them if necessary.
+- 🔌 **LEDs not lighting up?** — Check wiring and resistor placement  
+- 🔁 **Incorrect results?** — Double-check input switches  
+- 🔘 **Buttons unresponsive?** — Inspect connections or replace faulty components
